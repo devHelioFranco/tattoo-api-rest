@@ -4,6 +4,7 @@
   "description": "API REST para estudio de tatuagens, registro de clientes, agendamentos e orçamentos em banco de dados",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +20,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
     "sequelize": "^6.12.0-alpha.1"
   }
 }
