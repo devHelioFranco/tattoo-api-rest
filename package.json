@@ -1,0 +1,22 @@
+{
+  "name": "projeto-modulo-4",
+  "version": "1.0.0",
+  "description": "API REST para estudio de tatuagens, registro de clientes, agendamentos e orçamentos em banco de dados",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devHelioFranco/tattoo-api-rest.git"
+  },
+  "author": "Grupo 8: Evelyn, Hyan, Caio, Helio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devHelioFranco/tattoo-api-rest/issues"
+  },
+  "homepage": "https://github.com/devHelioFranco/tattoo-api-rest#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
