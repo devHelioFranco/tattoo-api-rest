@@ -51,7 +51,21 @@ class UsersController{
                 }
             })
             return res.status(200).json(updateUser)
-            
+
+        }catch(error){
+            return res.status(500).json(error.message)
+        }
+    }
+    static async remove(req, res){
+        const {id} = req.params
+        try{
+            await database.User.destroy({
+                where: {
+                    id:Number(id)
+                }
+            })
+            return res.status(200).json({mensagem: `id ${id} deletado`})
+
         }catch(error){
             return res.status(500).json(error.message)
         }
