@@ -24,6 +24,38 @@ class UsersController{
             return res.status(500).json(error.message)
         }
     }
+
+    static async save(req, res){
+        const newUser = req.body
+        try{
+            const createUser = await database.User.create(newUser)
+            return res.status(200).json(createUser)
+
+
+        }catch(error){
+            return res.status(500).json(error.message)
+        }
+    }
+    static async update(req, res){
+        const {id} = req.params
+        const newInfo = req.body
+        try{
+            await database.User.update(newInfo, { 
+                where: {
+                id: Number(id)
+            }     
+            })
+            const updateUser = await database.User.findOne({
+                where: {
+                    id:Number(id)
+                }
+            })
+            return res.status(200).json(updateUser)
+            
+        }catch(error){
+            return res.status(500).json(error.message)
+        }
+    }
 }
 
 module.exports = UsersController;
