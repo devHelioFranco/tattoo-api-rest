@@ -1,4 +1,5 @@
 const users = require('./userRoute')
+const agenda = require('./agendamentoRoute')
 const express = require('express')
 module.exports = app => {
 
@@ -8,5 +9,6 @@ module.exports = app => {
       });
     app.use(express.json())
     app.use(users)
+    app.use(agenda)
 
 }

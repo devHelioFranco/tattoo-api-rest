@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "26993011",
+    "password": "root123",
     "database": "tattoo-api",
     "host": "127.0.0.1",
     "dialect": "mysql"
