@@ -1,10 +1,10 @@
-const database = require('../models');
+const database = require('../models')
 
 class TatooArtistsController{
     static async getAllTatooArtists(req, res){
 
         try{
-            const allTatooArtists = await database.tattoo_artists.findAll()
+            const allTatooArtists = await database.Artists.findAll()
             return res.status(200).json(allTatooArtists)
         }
         catch(error){
