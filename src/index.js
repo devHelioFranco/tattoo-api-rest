@@ -1,12 +1,17 @@
-const express = require('express');
-const app = express();
-const routes = require('./routes')
+const express = require ("express")
+const bodyParser = require("body-parser")
 
+const app = express()
 
-const porta = 3000;
+app.use(bodyParser.json())// vai avisar o express que vamos usar outras bibliotecas 
 
-routes(app)
+const port = 3000
 
-app.listen(porta, () => console.log(`servidor está rodando na porta ${porta}`))
+app.get('/teste', (req,res) => res.
+status(200)
+.send({mensagem: "Boas-Vindas à minha Api "
+}))
 
-module.exports = app;
+app.listen(port, () => console.log (`servidor esta rodando na porta ${port}`))
+
+module.exports = app 
