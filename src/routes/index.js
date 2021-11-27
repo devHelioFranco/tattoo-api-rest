@@ -8,7 +8,8 @@ module.exports = app => {
         next();
       });
     app.use(express.json())
-    app.use(users, artists)
+    app.use(users, 
+      artists)
 
 }
  
