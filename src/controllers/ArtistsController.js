@@ -22,5 +22,15 @@ class TatooArtistsController{
 
         }
     }
+    static async saveArtist(req, res){
+        const newArtist = req.body
+
+        try{
+            const savedArtist = await database.Artists.create(newArtist)
+            return res.status(200).json(savedArtist)
+        } catch(error){
+            return res.status(500).json(error.message)
+        }
+    }
 }
 module.exports = TatooArtistsController;
