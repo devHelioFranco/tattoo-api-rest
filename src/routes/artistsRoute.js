@@ -6,5 +6,6 @@ const router = Router()
 router.get('/artists', ArtistsController.getAllTatooArtists);
 router.get('/artists/:id', ArtistsController.getOne);
 router.post('/artists', ArtistsController.saveArtist);
+router.put('/artists/:id', ArtistsController.updateArtist);
 
 module.exports = router

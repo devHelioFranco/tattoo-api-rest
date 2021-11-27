@@ -32,5 +32,19 @@ class TatooArtistsController{
             return res.status(500).json(error.message)
         }
     }
+    static async updateArtist(req, res){
+        const {id} = req.params
+        const newInfos = req.body
+
+        try{
+            await database.Artists.update(newInfos, {where: {id: Number(id)}})
+
+            const updatedArtist = await database.Artists.findOne( {where: {id: Number(id)}})
+            return res.status(200).json(updatedArtist)
+
+        }catch(error){
+            res.status(500).json(error.message)
+        }
+    }
 }
 module.exports = TatooArtistsController;
