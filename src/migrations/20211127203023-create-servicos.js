@@ -17,6 +17,7 @@ module.exports = {
       orcamento: {
         type: Sequelize.DECIMAL
       },
+      
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -23,6 +23,7 @@ module.exports = {
         references:{ model: 'artists', key:'id' }
       },
       servico_id: {
+        allowNull: false,
         type: Sequelize.INTEGER,
         references:{ model: 'servico', key:'id' }
       },
