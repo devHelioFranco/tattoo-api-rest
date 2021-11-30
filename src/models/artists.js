@@ -11,6 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      artists.hasMany(models.agendamento, {
+        foreignKey: 'tatuadores_id'
+      })
     }
   };
   Artists.init({

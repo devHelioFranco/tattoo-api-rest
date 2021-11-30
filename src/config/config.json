@@ -1,8 +1,13 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": ",hfr_Ky$6gmN8j-",
     "database": "tattoo_api",
+=======
+    "password": "root123",
+    "database": "tattoo-api",
+>>>>>>> agendamento
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
