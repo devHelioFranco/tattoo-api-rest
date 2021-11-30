@@ -14,6 +14,18 @@ module.exports = {
       data: {
         type: Sequelize.DATE
       },
+      user_id: {
+        type: Sequelize.INTEGER,
+        references:{ model: 'user', key:'id' }
+      },
+      tatuador_id: {
+        type: Sequelize.INTEGER,
+        references:{ model: 'tatuadores', key:'id' }
+      },
+      servico_id: {
+        type: Sequelize.INTEGER,
+        references:{ model: 'servico', key:'id' }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
