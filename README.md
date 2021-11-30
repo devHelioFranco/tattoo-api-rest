@@ -31,7 +31,7 @@ $ cd tattoo-api-rest
 # Install dependencies
 $ npm install
 
-#start the project 
+# To start the project 
 $ npm start
 
 ```
