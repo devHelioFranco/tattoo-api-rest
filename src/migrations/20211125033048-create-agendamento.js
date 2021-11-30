@@ -1,23 +1,32 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Servicos', {
+    await queryInterface.createTable('Agendamentos', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      nome: {
-        type: Sequelize.STRING
-      },
       status: {
         type: Sequelize.BOOLEAN
       },
-      orcamento: {
-        type: Sequelize.DECIMAL
+      data: {
+        type: Sequelize.DATE
       },
-      
+      user_id: {
+        type: Sequelize.INTEGER,
+        references:{ model: 'user', key:'id' }
+      },
+      tatuador_id: {
+        type: Sequelize.INTEGER,
+        references:{ model: 'artists', key:'id' }
+      },
+      servico_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references:{ model: 'servico', key:'id' }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -29,6 +38,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Servicos');
+    await queryInterface.dropTable('Agendamentos');
   }
 };

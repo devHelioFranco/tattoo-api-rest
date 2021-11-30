@@ -2,6 +2,7 @@ const users = require('./userRoute')
 const artists = require('./artistsRoute')
 const servicos = require('./servicosRoute')
 const express = require('express')
+const agendamento = require('./agendamentoRoute')
 module.exports = app => {
 
     app.use((req, res, next) => {
@@ -11,7 +12,7 @@ module.exports = app => {
     app.use(express.json())
     app.use(users, 
       artists, 
-      servicos)
+      servicos, agendamento)
 
 }
  
