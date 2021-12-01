@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'tatuador_id'
       })
       Agendamento.belongsTo(models.Servicos, {
-        foreignKey: 'servico_id'
+        foreignKey: 'servicos_id'
       })
     }
   };

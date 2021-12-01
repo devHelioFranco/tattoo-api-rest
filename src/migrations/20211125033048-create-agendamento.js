@@ -16,16 +16,16 @@ module.exports = {
       },
       user_id: {
         type: Sequelize.INTEGER,
-        references:{ model: 'user', key:'id' }
+        references:{ model: 'User', key:'id' }
       },
       tatuador_id: {
         type: Sequelize.INTEGER,
-        references:{ model: 'artists', key:'id' }
+        references:{ model: 'Artists', key:'id' }
       },
       servico_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
-        references:{ model: 'servico', key:'id' }
+        references:{ model: 'Servicos', key:'id' }
       },
       createdAt: {
         allowNull: false,
