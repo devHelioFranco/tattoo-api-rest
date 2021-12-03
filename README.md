@@ -36,6 +36,14 @@ $ npm start
 
 ```
 
+	
+<h2> Avalaible Routes</h2>
+```
+GET and POST http://localhost:3000/users
+GET, PUT and DELETE http://localhost:3000/users/:id
+	
+	```
+
 <h2>:technologist: Developers</h2>
 
 <li><a href="https://github.com/CaioSix">Caio Cavalcanti</i>
