@@ -33,17 +33,19 @@ $ npm install
 
 # To start the project 
 $ npm start
-
 ```
-
 	
-<h2> Avalaible Routes</h2>
-```
-GET and POST http://localhost:3000/users
-GET, PUT and DELETE http://localhost:3000/users/:id
-	
-	```
+<h2>:world_map: Some of the Avalaible Routes</h2>
 
+	GET - all users http://localhost:3000/users
+	GET - one user http://localhost:3000/users/:id
+	POST - save users http://localhost:3000/users
+	PUT - update a user http://localhost:3000/users/:id
+	DELETE -delete a user http://localhost:3000/users/:id
+	
+	<--! The other entities goes in the same way, so they get the same routes-->
+	<--! The only difference is the name of the entity which goes at the end of the url-->
+	
 <h2>:technologist: Developers</h2>
 
 <li><a href="https://github.com/CaioSix">Caio Cavalcanti</i>
