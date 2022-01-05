@@ -23,6 +23,9 @@ module.exports = {
       cep: {
         type: Sequelize.INTEGER
       },
+      email:{
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

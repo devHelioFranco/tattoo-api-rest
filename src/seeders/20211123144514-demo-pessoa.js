@@ -10,6 +10,7 @@ module.exports = {
         endereco: 'Rua pedro ivo 123',
         cidade: 'Sao Paulo',
         cep: 85780000,
+        email: 'jose@gmail.com',
 				createdAt: new Date(),
 				updatedAt: new Date()
 			}
