@@ -18,9 +18,9 @@ module.exports = (sequelize, DataTypes) => {
       Agendamento.belongsTo(models.Artists,{
         foreignKey: 'tatuador_id'
       })
-      Agendamento.belongsTo(models.Servicos, {
-        foreignKey: 'servico_id'
-      })
+      // Agendamento.belongsTo(models.Servicos, {
+      //   foreignKey: 'servico_id'
+      // })
     }
   };
   Agendamento.init({
