@@ -11,9 +11,22 @@ module.exports = {
         cidade: 'Sao Paulo',
         cep: 85780000,
         email: 'jose@gmail.com',
+        senha: 'jose1234',
+				createdAt: new Date(),
+				updatedAt: new Date()
+			},
+      {			
+				nome: 'Pedro Santos',
+				idade: 22,
+        endereco: 'Rua Joao Fagundes 345',
+        cidade: 'Sao Paulo',
+        cep: 85790124,
+        email: 'pedro@gmail.com',
+        senha: 'pedro1234',
 				createdAt: new Date(),
 				updatedAt: new Date()
 			}
+
   ], {})
     
   },
