@@ -22,11 +22,11 @@ module.exports = {
         type: Sequelize.INTEGER,
         references:{ model: 'Artists', key:'id' }
       },
-      servico_id: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references:{ model: 'Servicos', key:'id' }
-      },
+      // servico_id: {
+      //   allowNull: false,
+      //   type: Sequelize.INTEGER,
+      //   references:{ model: 'Servicos', key:'id' }
+      // },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
@@ -39,5 +39,6 @@ module.exports = {
   },
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('Agendamentos');
+    await queryInterface.removeColumn('Agendamentos', 'servico_id');
   }
 };
