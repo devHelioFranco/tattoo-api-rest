@@ -28,7 +28,7 @@ class UsersController{
     static async save(req, res){
         const newUser = req.body
         try{
-            const createUser = await database.User.create(newUser)
+            const createUser = await database.Users.create(newUser)
             return res.status(200).json(createUser)
 
 
@@ -45,7 +45,7 @@ class UsersController{
                 id: Number(id)
             }     
             })
-            const updateUser = await database.User.findOne({
+            const updateUser = await database.Users.findOne({
                 where: {
                     id:Number(id)
                 }
@@ -59,7 +59,7 @@ class UsersController{
     static async remove(req, res){
         const {id} = req.params
         try{
-            await database.User.destroy({
+            await database.Users.destroy({
                 where: {
                     id:Number(id)
                 }
