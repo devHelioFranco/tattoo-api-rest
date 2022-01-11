@@ -3,7 +3,7 @@ const database = require('../models');
 class UsersController{
     static async index(req, res){
         try{
-            const indexUsers = await database.User.findAll()
+            const indexUsers = await database.Users.findAll()
             return res.status(200).json(indexUsers)
         }catch(error){
             return res.status(500).json(error.message)
@@ -12,14 +12,14 @@ class UsersController{
     }
 
     static async show(req, res){
-        const  {id} = req.params
+        const  {email} = req.params
         try{
-            const idUser = await database.User.findOne({
+            const emailUser = await database.Users.findOne({
                 where: {
-                    id:Number(id)
+                    email:String(email)
                 }
             })
-            return res.status(200).json(idUser)
+            return res.status(200).json(emailUser)
         }catch(error){
             return res.status(500).json(error.message)
         }
